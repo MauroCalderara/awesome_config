@@ -1,3 +1,4 @@
+*.swp
 rc.lua
 config_local.lua
 screenlocker
