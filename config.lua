@@ -786,7 +786,7 @@ globalkeys = awful.util.table.join(globalkeys,
   awful.key({}, "XF86ScreenSaver", 
     function()
       awful.util.spawn("sync")
-      awful.util.spawn("[ -x ~/.config/awesome/screenlocker ] && ~/.config/awesome/screenlocker lock")
+      awful.util.spawn(awful.util.getdir("config") .. "/screenlocker lock")
     end
   ),
   -- Configure multi-screen
@@ -851,6 +851,8 @@ awful.rules.rules = {
     { rule = { class = "Gnome-terminal"}, 
       properties = { border_width = beautiful.terminal_border_width } },
     { rule = { class = "LilyTerm"}, 
+      properties = { border_width = beautiful.terminal_border_width } },
+    { rule = { class = "URxvt"}, 
       properties = { border_width = beautiful.terminal_border_width } },
     -- Make gimp float
     { rule = { class = "gimp" },
