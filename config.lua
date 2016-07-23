@@ -403,10 +403,6 @@ root.buttons(awful.util.table.join(
 --    in tmux and vim, respectively, and an awesome tag corresponds to 
 --    a window or tab in tmux and vim, respectively.
 --    The ``leader'' for awesome is the 'Win' key.
---
---    Keybindings concerning the layout start with Ctrl+Alt (legacy)
---    Keybindings affecting the screen (monitor) start with Win+Ctrl
---    Keybindings related to the window manager start with Win+Ctrl+Alt
 
 
 -- Keybindings for handling tags are created in for-loops
@@ -422,7 +418,8 @@ globalkeys = awful.util.table.join(
   -- Promptbox
   awful.key({ modkey }, "space",
     function ()
-      mypromptbox[mouse.screen]:run()
+      --mypromptbox[mouse.screen]:run()
+      awful.util.spawn("gmrun")
     end
   ),
   -- Spawn terminal
