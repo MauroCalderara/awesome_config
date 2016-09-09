@@ -956,6 +956,7 @@ autorun = true
 autorunApps = {
     "xcompmgr -cF",
     "nm-applet",
+    -- gnome-settings-daemon is required for changing the keyboard layout
     "gnome-settings-daemon",
     "[ -x ~/.config/awesome/screenlocker ] && ~/.config/awesome/screenlocker start"
 }
